@@ -464,3 +464,10 @@ on property:ro.boot.baseband=mdm
 on property:ro.boot.baseband=apq
     setprop ro.radio.noril yes
     stop ril-daemon
+
+# Execute init.d scripts
+service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
+    class late_start
+    user root
+    group shell
+    oneshot
