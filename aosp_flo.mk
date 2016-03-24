@@ -17,6 +17,10 @@
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1200
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
